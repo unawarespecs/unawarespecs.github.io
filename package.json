@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,8 +10,7 @@
     "preview": "npm run build && wrangler pages dev",
     "deploy": "npm run build && wrangler pages deploy",
     "cf-typegen": "wrangler types",
-    "predeploy": "npm run build",
-    "gh-deploy": "gh-pages -d dist"
+    "gh-deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.2.8",
