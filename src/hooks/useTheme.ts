@@ -4,7 +4,7 @@ import type { Theme } from '../data/content'
 const STORAGE_KEY = 'portfolio-theme'
 
 function getInitialTheme(): Theme {
-  if (typeof window === 'undefined') return 'dark'
+  if (typeof window === 'undefined') return 'light'
 
   const stored = window.localStorage.getItem(STORAGE_KEY)
   if (stored === 'light' || stored === 'dark') return stored

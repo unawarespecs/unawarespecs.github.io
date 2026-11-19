@@ -1,3 +1,8 @@
+import type { Certification } from "./certification";
+import type { Experience } from "./experience";
+import type { Project } from "./project";
+import type { Seminar } from "./seminar";
+
 export type Theme = "light" | "dark";
 
 export type Social = {
@@ -23,9 +28,9 @@ export const profile = {
   name: "Christian De Gala",
   role: "IT Student, Web Dev",
   initials: "CDG",
-  tagline: "I build stuff. Still a beginner, but willing to learn.",
+  tagline: "I build stuff. Still learning as I go.",
   summary:
-    "Third-year Information Technology student with hands-on experience shipping full-stack web applications for coursework. Comfortable owning a feature end to end: modeling data, designing APIs, wiring authentication, and delivering a responsive UI that feels good to use.",
+    "Third-year Information Technology student at Mapúa. I've built full-stack web apps for coursework, doing the database schema, the API, and the interface myself. Still early in this, but I like the moment when the pieces finally fit.",
   location: "Taguig City, Philippines",
   university: "Mapúa University - Makati Campus",
   degree: "BS Information Technology",
@@ -53,14 +58,14 @@ export const socials: Social[] = [
     href: "mailto:cnrdegala@mymail.mapua.edu.ph",
     icon: "mail",
   },
-  { label: "X", href: "https://x.com/chrisdg__", icon: "x" },
+  { label: "Twitter", href: "https://x.com/chrisdg__", icon: "x" },
 ];
 
 export const stats = [
   { value: "4+", label: "Projects shipped" },
   { value: "6", label: "Years studying" },
   { value: "8", label: "Certifications" },
-  { value: "2", label: "Stack projects" },
+  { value: "4", label: "Stack projects" },
 ];
 
 export const skillGroups: { title: string; items: string[] }[] = [
@@ -85,23 +90,13 @@ export const skillGroups: { title: string; items: string[] }[] = [
 export const principles = [
   {
     title: "Full-stack ownership",
-    body: "I take a feature from schema to screen — modelling the data, exposing a clean API, and shipping the UI that consumes it.",
+    body: "When I build a feature I try to finish it: the schema, the API, and the screen the user actually touches.",
   },
   {
     title: "Always learning",
-    body: "I write, break, and document what I build. Coursework doubles as a testing ground for ideas I want to ship for real.",
+    body: "I write code, break it, and write down what went wrong. Coursework is where I try ideas out before using them on something real.",
   },
 ];
-
-export type Experience = {
-  role: string;
-  org: string;
-  period: string;
-  location: string;
-  kind: "internship" | "role" | "project";
-  points: string[];
-  stack: string[];
-};
 
 export const experiences: Experience[] = [
   {
@@ -111,31 +106,21 @@ export const experiences: Experience[] = [
     location: "Taguig City",
     kind: "internship",
     points: [
-      "Assisted in TAPI's IT department (MIS) as helpdesk technician, working with software and hardware.",
-      "Facilitated the moving of documents between departments in the TAPI.",
-      "Handled legal documents as a member of the Legal Unit.",
-      "Performed inventory management of legal documents.",
+      "Worked the helpdesk in TAPI's IT department (MIS), handling software and hardware problems for staff.",
+      "Moved documents between TAPI departments.",
+      "Processed legal documents while assigned to the Legal Unit.",
+      "Kept an inventory of the Legal Unit's documents.",
     ],
     stack: [],
   },
 ];
 
-export type Project = {
-  title: string;
-  blurb: string;
-  description: string;
-  stack: string[];
-  links: { label: string; href: string }[];
-  year: string;
-  featured?: boolean;
-};
-
 export const projects: Project[] = [
   {
     title: "Veloce Auto",
-    blurb: "Full-stack car rental application",
+    blurb: "Car rental app with a Spring Boot API",
     description:
-      "A full-stack car rental application that provides a user-friendly way to rent a premium vehicle. A backend Spring Boot REST API manages car rentals, customers, and rental history, consumed by the Angular frontend. Built as coursework for the subject, Application Development 2 (ITS181-02).",
+      "A full-stack app for renting premium cars. A Spring Boot REST API handles cars, customers, and rental history, with an Angular frontend on top. Built for Application Development 2 (ITS181-02).",
     stack: ["Angular", "TypeScript", "Spring Boot", "Java", "MySQL"],
     links: [
       { label: "Live demo", href: "https://sixth-crowd-05418823.figma.site" },
@@ -146,87 +131,83 @@ export const projects: Project[] = [
   },
   {
     title: "sKonnect",
-    blurb: "Barangay community portal",
+    blurb: "Community portal for a barangay",
     description:
-      "A community portal website for the community of Barangay Sta Cruz, Bayan ng Malitbog. Bootstrap CSS was used to improve legibility and accessibility, allowing citizens of that community to easily read announcements and updates from the barangay officials.",
+      "A community portal for Barangay Sta. Cruz in Malitbog. Residents use it to read announcements and updates from barangay officials, and I used Bootstrap so the text stays readable on phones.",
     stack: ["React", "TypeScript", "PostgreSQL", "Supabase", "Bootstrap"],
     links: [
-      { label: "Source", href: "https://github.com/unawarespecs/kim-finalproj-uistuff" }
+      {
+        label: "Source",
+        href: "https://github.com/unawarespecs/kim-finalproj-uistuff",
+      },
     ],
     year: "2025",
     featured: false,
   },
   {
     title: "An unnamed social media app",
-    blurb: "Simple social media app inspired by Threads",
+    blurb: "Small social app inspired by Threads",
     description:
-      "A practical group project made as coursework. Heavily inspired by Instagram's Threads app, this social media app allowed students to communicate with each other, with image support.",
+      "A group project for one of my web systems courses. The idea came straight from Threads: a place where students post updates and talk to each other, with image support.",
     stack: ["React", "JavaScript", "Supabase"],
     links: [
-      { label: "Source", href: "https://github.com/Kimochei/WebSys2-EM01-Group5-PE1" },
+      {
+        label: "Source",
+        href: "https://github.com/Kimochei/WebSys2-EM01-Group5-PE1",
+      },
     ],
     year: "2025",
   },
   {
     title: "Kuroba Experimental",
-    blurb: "A fork of an Android app for bug fixing purposes",
+    blurb: "Fork of an Android imageboard app I fixed up",
     description:
-      "A fork of an imageboard browser app made by another developer. Fixed some bugs related to archive sites and the CAPTCHA, which was upstreamed a year later.",
+      "A fork of an imageboard browser built by another developer. I fixed bugs in archive site support and the CAPTCHA; both fixes went upstream a year later.",
     stack: ["Android", "Kotlin"],
-    links: [{ label: "Source", href: "https://github.com/unawarespecs/kurobaex" }],
+    links: [
+      { label: "Source", href: "https://github.com/unawarespecs/kurobaex" },
+    ],
     year: "2025",
   },
   {
     title: "Tahanan Outreach Projects & Services, Inc.",
-    blurb: "A website for a non-governmental organization",
+    blurb: "Website for an NGO",
     description:
-      "A website for the aforementioned organization. Also serves as a secondary means to show the organization's activities alongside with their Facebook page. Built an administrator dashboard allowing them to post announcements, event schedules, and a donation tracker.",
+      "A website for the NGO Tahanan Outreach Projects & Services. It gives them somewhere besides Facebook to post announcements and event schedules. There's an admin dashboard for posting updates and tracking donations.",
     stack: ["PHP", "MySQL", "Bootstrap"],
     links: [
-      { label: "Source", href: "https://github.com/unawarespecs/its122l-project-tops" }
+      {
+        label: "Source",
+        href: "https://github.com/unawarespecs/its122l-project-tops",
+      },
     ],
     year: "2024",
-  }
+  },
 ];
-
-export type Seminar = {
-  name: string;
-  event: string;
-  date: string;
-  location: string;
-  note: string;
-};
 
 export const seminars: Seminar[] = [
   {
     name: "Google Sync: Timeless 26'-27'",
-    event: "GDGoC Mapua Makati General Assembly - organization meetup",
+    event: "GDGoC Mapúa Makati General Assembly - organization meetup",
     date: "September 2026",
-    location: "Mapua University Makati Campus",
-    note: "Met up with members of the Mapua GDGoC and learned about their future projects and endeavors.",
+    location: "Mapúa University Makati Campus",
+    note: "Met members of Mapúa GDGoC and heard about the projects they have coming up.",
   },
   {
     name: "From Likes to Logins: Why Identity Security Powers Safe Innovation",
     event: "Cybersecurity seminar",
     date: "February 2026",
-    location: "Mapua University Makati Campus",
-    note: "A cybersecurity seminar discussing about opsec and social media threats.",
+    location: "Mapúa University Makati Campus",
+    note: "Talked about opsec and the threats people run into on social media.",
   },
   {
     name: "Capcom Masterclass: Intellectual Property and the Game Business",
     event: "Game dev webinar",
     date: "January 2026",
     location: "Online",
-    note: "An online webinar from renowned game developer Capcom, discussing about protection of intellectual property in the video game industry.",
+    note: "An online session from Capcom on how the game industry protects intellectual property.",
   },
 ];
-
-export type Certification = {
-  name: string;
-  issuer: string;
-  date: string;
-  credential: string;
-};
 
 export const certifications: Certification[] = [
   {
@@ -266,7 +247,7 @@ export const certifications: Certification[] = [
     credential: "63V8LB74LTTH",
   },
   {
-    name: "Essentials of Enterpreneurship: Thinking & Action",
+    name: "Essentials of Entrepreneurship: Thinking & Action",
     issuer: "University of California, Irvine (Coursera)",
     date: "December 2025",
     credential: "K058NK4DK0BZ",
