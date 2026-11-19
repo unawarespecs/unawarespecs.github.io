@@ -13,7 +13,8 @@ export function About() {
       <div className="about-grid">
         <div className="about-card">
           <div className="about-head">
-            <span className="about-avatar">{profile.initials}</span>
+            {/* <span className="about-avatar">{profile.initials}</span> */}
+            <img src="img/profpic.png" className="about-avatar" alt="Profile picture"></img>
             <div>
               <h3>{profile.name}</h3>
               <p className="about-meta">

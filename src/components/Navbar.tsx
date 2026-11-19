@@ -65,7 +65,8 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
             window.scrollTo({ top: 0, behavior: 'smooth' })
           }}
         >
-          <span className="brand-mark">{profile.initials}</span>
+          {/* <span className="brand-mark">{profile.initials}</span> */}
+          <img src="img/profpic.png" className="brand-mark" alt="Profile picture"></img>
           <span className="brand-text">
             {profile.name}
             <span className="brand-role">{profile.role}</span>

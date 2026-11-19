@@ -123,7 +123,7 @@ export const projects: Project[] = [
       "A full-stack app for renting premium cars. A Spring Boot REST API handles cars, customers, and rental history, with an Angular frontend on top. Built for Application Development 2 (ITS181-02).",
     stack: ["Angular", "TypeScript", "Spring Boot", "Java", "MySQL"],
     links: [
-      { label: "Live demo", href: "https://sixth-crowd-05418823.figma.site" },
+      { label: "Live demo (frontend only)", href: "https://sixth-crowd-05418823.figma.site" },
       { label: "Source", href: "https://github.com/unawarespecs/veloce" },
     ],
     year: "2026",
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     title: "sKonnect",
     blurb: "Community portal for a barangay",
     description:
-      "A community portal for Barangay Sta. Cruz in Malitbog. Residents use it to read announcements and updates from barangay officials, and I used Bootstrap so the text stays readable on phones.",
+      "A community portal for Barangay Sta. Cruz in Malitbog. Built as a practical project for Web Systems and Technologies 2 (ITS122L). Residents use it to read announcements and updates from barangay officials, and I used Bootstrap so the text stays readable on phones.",
     stack: ["React", "TypeScript", "PostgreSQL", "Supabase", "Bootstrap"],
     links: [
       {
@@ -191,14 +191,14 @@ export const seminars: Seminar[] = [
     event: "GDGoC Mapúa Makati General Assembly - organization meetup",
     date: "September 2026",
     location: "Mapúa University Makati Campus",
-    note: "Met members of Mapúa GDGoC and heard about the projects they have coming up.",
+    note: "Met members of Mapúa's Google Developers Groups on Campus (GDGoC) organization and heard about the projects they have coming up.",
   },
   {
     name: "From Likes to Logins: Why Identity Security Powers Safe Innovation",
     event: "Cybersecurity seminar",
     date: "February 2026",
     location: "Mapúa University Makati Campus",
-    note: "Talked about opsec and the threats people run into on social media.",
+    note: "Learned about effective opsec (operational security) and the threats people run into on social media.",
   },
   {
     name: "Capcom Masterclass: Intellectual Property and the Game Business",

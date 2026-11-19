@@ -7,7 +7,7 @@ const codeLines = [
     tokens: [
       { t: '    stack', c: 'key' },
       { t: ': ', c: 'op' },
-      { t: "['TypeScript', 'React', 'Node']", c: 'str' },
+      { t: "['TypeScript', 'React', 'Java']", c: 'str' },
       { t: ',', c: 'op' },
     ],
   },
@@ -33,7 +33,8 @@ export function Hero() {
           </span>
 
           <h1 className="hero-title">
-            Hi, I&rsquo;m <span className="text-accent">{profile.name}</span>
+            {/* Hi, I&rsquo;m <span className="text-accent">{profile.name}</span> */}
+            こんにちは、<span className="text-accent">{profile.name}</span>さんです。
             <span className="hero-role">{profile.role}</span>
           </h1>
 
